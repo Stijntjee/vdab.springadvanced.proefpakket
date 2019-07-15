@@ -1,0 +1,15 @@
+body {
+    font-family: Helvetica;
+    margin: 0;
+    background-color: #FFFCE6;
+}
+
+h1 {
+    color: crimson;
+    font-variant: small-caps
+}
+
+img
+{
+    margin-top: 15px;
+}

@@ -1,7 +1,8 @@
 body {
     font-family: Helvetica;
-    margin: 0;
-    background-color: #FFFCE6;
+    margin: auto;
+    background-color: lightgrey;
+    width: 70%;
 }
 
 h1 {
@@ -11,5 +12,31 @@ h1 {
 
 img
 {
-    margin-top: 15px;
+    margin: 20px;
+    margin: 20px 0 20px -235px;
+}
+
+.vet{
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: crimson;
+    font-weight: bold;
+}
+
+a:hover
+{
+    color: rebeccapurple;
+}
+
+.big
+{
+    font-size: larger;
+
+}
+a:hover
+{
+    background-color: mediumseagreen;
 }

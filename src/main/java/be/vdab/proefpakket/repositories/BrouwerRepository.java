@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface BrouwerRepository extends JpaRepository<Brouwer, Long> {
     List<Brouwer> findByNaamIsStartingWithOrderByNaam(String letter);
+    Brouwer findById(long id);
 }

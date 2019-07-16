@@ -8,7 +8,7 @@
     <span>Een pakket bieren van een brouwer naar uw keuze.</span>
     <img alt="brouwerij" th:src="@{/images/brouwerij.jpg}" class="fullwidth">
 
-    <a th:each="letter:${alfabet}" th:text="${letter}" th:href="@{/{letter} (letter = ${letter})}"></a>
+    <a th:each="letter:${alfabet}" th:text="${letter}" th:href="@{/{letter} (letter = ${letter})}" class="big"></a>
 
     <ul>
         <li th:each="brouwer:${brouwers}"><a th:text="${brouwer.naam}" th:href="@{/brouwer/{id} (id  = ${brouwer.id})}"></a></li>

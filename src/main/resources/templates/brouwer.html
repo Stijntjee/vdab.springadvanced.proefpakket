@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="nl" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="fragments::head(title=${brouwer.naam})"></head>
+
+<body>
+    <h1 th:text="${brouwer.naam}"></h1>
+    <p>straat</p>
+    <p th:text="${brouwer.adres.straat}" class="vet"></p>
+    <p>Huisnummer</p>
+    <p th:text="${brouwer.adres.huisNr}" class="vet"></p>
+    <p>Postcode</p>
+    <p th:text="${brouwer.adres.gemeente.postcode}" class="vet"></p>
+    <p>Gemeente</p>
+    <p th:text="${brouwer.adres.gemeente.naam}" class="vet"></p>
+    <p>Ondernemingsnummer</p>
+    <p th:text="${brouwer.ondernemingsNr}" class="vet"></p>
+
+    <a th:href="@{/brouwer/{id}/ondernemingsnummer(id = ${brouwer.id})}">Ondernemingsnummer invullen</a>
+</body>
+</html>

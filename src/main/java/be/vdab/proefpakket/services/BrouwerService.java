@@ -6,4 +6,6 @@ import java.util.List;
 
 public interface BrouwerService {
     List<Brouwer> findByFirstLetter(String letter);
+    Brouwer findById(long id);
+    void update(Brouwer brouwer);
 }

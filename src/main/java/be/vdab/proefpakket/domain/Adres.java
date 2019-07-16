@@ -28,4 +28,5 @@ public class Adres implements Serializable
     public Gemeente getGemeente() {
         return gemeente;
     }
+
 }

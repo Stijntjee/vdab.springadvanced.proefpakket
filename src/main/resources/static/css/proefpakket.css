@@ -40,3 +40,14 @@ a:hover
 {
     background-color: mediumseagreen;
 }
+
+label {
+    cursor: pointer;
+}
+
+input, select {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    margin-top: 0.2em;
+}

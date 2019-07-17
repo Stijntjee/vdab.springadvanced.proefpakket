@@ -17,5 +17,6 @@
     <p th:text="${brouwer.ondernemingsNr}" class="vet"></p>
 
     <a th:href="@{/brouwer/{id}/ondernemingsnummer(id = ${brouwer.id})}">Ondernemingsnummer invullen</a>
+    <a th:href="@{/bestellen/{id}(id = ${brouwer.id})}">Proefpakket aanvragen</a>
 </body>
 </html>

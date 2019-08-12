@@ -1,6 +1,7 @@
 package be.vdab.proefpakket.domain;
 
 import javax.persistence.*;
+import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -10,14 +11,13 @@ import java.time.LocalDate;
 @Entity
 @Table(name ="bestellingen")
 public class Bestelling implements Serializable {
+    public interface Stap1 {}
+    public interface Stap2 {}
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    public interface Stap1 {}
-    public interface Stap2 {}
-    @NotNull(groups = Stap2.class)
-    private LocalDate datum;
+    private LocalDate datum = LocalDate.now();
     @NotBlank(groups = Stap1.class)
     private String voornaam;
     @NotBlank(groups = Stap1.class)
@@ -26,6 +26,7 @@ public class Bestelling implements Serializable {
     @Email(groups = Stap1.class)
     private String emailAdres;
     @NotNull(groups = Stap2.class)
+    @Valid
     @Embedded
     private Adres adres;
     @NotNull(groups = Stap2.class)

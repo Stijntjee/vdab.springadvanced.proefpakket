@@ -10,10 +10,10 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional(readOnly = false, isolation = Isolation.READ_COMMITTED)
+@Transactional(readOnly = true, isolation = Isolation.READ_COMMITTED)
 public class DefaultGemeenteService implements GemeenteService
 {
-    GemeenteRepository gemeenteRepository;
+    private final GemeenteRepository gemeenteRepository;
     //CONSTRUCTORS
     DefaultGemeenteService(GemeenteRepository gemeenteRepository)
     {
